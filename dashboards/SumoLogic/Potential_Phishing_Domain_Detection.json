@@ -1,0 +1,15 @@
+{
+    "type": "SavedSearchWithScheduleSyncDefinition",
+    "name": "Potential Phishing Domain Detection",
+    "search": {
+        "queryText": "_sourceCategory=\"prod/infosec/cloud/tldmon\"\n(sumo?logic* or ?umologic* or s?mologic* or su?mologic* or sum?logic* or sumo?ogic* or sumol?gic* or sumol?ic* or sumologi?c* or sumologi* or *sumo?logic* or *umologic* or *s?mologic* or *su?mologic* or *sum?logic* or *sumo?ogic* or *sumol?gic* or *sumol?ic* or *sumologi?c* or *sumologi* or sumollogic.* or sunnologic.* or suwologic.* or sumologic*com or sumologic*net)\n| parse \"*\" as domain\n| concat(domain, \"  \\n\") as domain\n| count by domain\n| order by _count",
+        "defaultTimeRange": "-30d",
+        "byReceiptTime": false,
+        "viewName": "",
+        "viewStartTime": "1970-01-01T00:00:00Z",
+        "queryParameters": [],
+        "parsingMode": "AutoParse"
+    },
+    "searchSchedule": null,
+    "description": ""
+}
