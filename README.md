@@ -12,6 +12,7 @@ New Domain Registration SIEM Ingestion and Dashboards for SumoLogic
 
 # Configuration
 Set "pwdir" to the directory to drop log files for SIEM Ingestion
+Configure SIEM Collector to get log files created from '/app/dat/tldMon/' (or whatever you set "pwdir" to)
 
 # Execution
 python3 /app/bin/tldMon/tldMon.py
